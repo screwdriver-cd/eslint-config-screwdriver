@@ -6,7 +6,9 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jenkins-mocha --recursive",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,8 @@
   "dependencies": {
     "eslint": "^3.15.0",
     "eslint-config-airbnb-base": "^11.1.0",
-    "eslint-plugin-import": "^2.2.0"
-  }
+    "eslint-plugin-import": "^2.2.0",
+    "snyk": "^1.30.1"
+  },
+  "snyk": true
 }
