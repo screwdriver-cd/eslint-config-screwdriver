@@ -8,7 +8,8 @@ describe('index test', () => {
         assert.isDefined(config.rules);
     });
 
-    it('extends airbnb', () => {
-        assert.equal(config.extends, 'airbnb-base');
+    it('extends airbnb and plugin:prettier/recommended', () => {
+        assert.include(config.extends, 'airbnb-base');
+        assert.include(config.extends, 'plugin:prettier/recommended');
     });
 });
