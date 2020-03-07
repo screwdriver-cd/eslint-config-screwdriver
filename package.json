@@ -1,11 +1,10 @@
 {
   "name": "eslint-config-screwdriver",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "ESLint rules for screwdriver projects",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint .",
-    "test": "jenkins-mocha --recursive",
+    "test": "nyc --report-dir ./artifacts/coverage --reporter=lcov mocha --recursive --timeout 4000 --retries 1 --exit --allow-uncaught true --color true",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -15,6 +14,8 @@
   "homepage": "https://github.com/screwdriver-cd/eslint-config-screwdriver",
   "bugs": "https://github.com/screwdriver-cd/eslint-config-screwdriver/issues",
   "keywords": [
+    "eslint",
+    "eslintconfig",
     "screwdriver",
     "yahoo"
   ],
@@ -36,15 +37,22 @@
       "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
     }
   },
+  "peerDependencies": {
+    "eslint": ">= 6",
+    "prettier": ">= 1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.0"
+  },
   "devDependencies": {
     "chai": "^4.0.2",
-    "jenkins-mocha": "^6.0.0"
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0"
   },
   "dependencies": {
-    "eslint": "^5.8.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2"
   }
