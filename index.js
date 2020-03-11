@@ -28,7 +28,6 @@ module.exports = {
                 peerDependencies: false
             }
         ],
-        'max-len': ['error', { code: 120, ignoreComments: true }],
         'max-lines-per-function': 'warn',
         'max-params': 'warn',
         'max-statements': 'warn',
