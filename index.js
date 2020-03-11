@@ -66,7 +66,8 @@ module.exports = {
             'error',
             {
                 singleQuote: true,
-                tabWidth: 4
+                tabWidth: 4,
+                printWidth: 120
             }
         ],
         'require-jsdoc': [
