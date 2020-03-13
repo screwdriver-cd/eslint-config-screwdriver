@@ -41,6 +41,7 @@ module.exports = {
         'no-bitwise': 'error',
         'no-multiple-empty-lines': ['error', { max: 1 }],
         'no-param-reassign': ['error', { props: false }],
+        'no-underscore-dangle': ['off'],
         // Override base rule to remove 'ForOfStatement'
         'no-restricted-syntax': [
             'error',
