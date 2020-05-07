@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc --report-dir ./artifacts/coverage --reporter=lcov mocha --recursive --timeout 4000 --retries 1 --exit --allow-uncaught true --color true",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -54,6 +56,8 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
-  }
+    "prettier": "^1.18.2",
+    "snyk": "^1.319.1"
+  },
+  "snyk": true
 }
