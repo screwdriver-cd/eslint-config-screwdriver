@@ -17,7 +17,7 @@ module.exports = {
     rules: {
         'comma-dangle': ['error', 'never'],
         'class-methods-use-this': 'off',
-        complexity: 'warn',
+        complexity: 'error',
         eqeqeq: ['error', 'always'],
         'import/newline-after-import': ['off'],
         'import/no-extraneous-dependencies': [
@@ -28,13 +28,10 @@ module.exports = {
                 peerDependencies: false
             }
         ],
-        'max-lines-per-function': 'warn',
-        'max-params': 'warn',
-        'max-statements': 'warn',
-        'new-cap': [
-            'error',
-            { capIsNewExceptions: ['Given', 'When', 'Then', 'Before', 'After'] }
-        ],
+        'max-lines-per-function': ['warn', { max: 150, skipComments: true }],
+        'max-params': ['warn', 5],
+        'max-statements': ['warn', 25],
+        'new-cap': ['error', { capIsNewExceptions: ['Given', 'When', 'Then', 'Before', 'After'] }],
         'newline-after-var': ['error', 'always'],
         'newline-before-return': 'error',
         'no-await-in-loop': 'warn',
