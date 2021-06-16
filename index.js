@@ -17,7 +17,7 @@ module.exports = {
     rules: {
         'comma-dangle': ['error', 'never'],
         'class-methods-use-this': 'off',
-        complexity: 'error',
+        complexity: 'warn',
         eqeqeq: ['error', 'always'],
         'import/newline-after-import': ['off'],
         'import/no-extraneous-dependencies': [
@@ -30,7 +30,7 @@ module.exports = {
         ],
         'max-lines-per-function': ['warn', { max: 150, skipComments: true }],
         'max-params': ['warn', 5],
-        'max-statements': ['warn', 25],
+        'max-statements': ['warn', 50], // in an async/await world this can get high
         'new-cap': ['error', { capIsNewExceptions: ['Given', 'When', 'Then', 'Before', 'After'] }],
         'newline-after-var': ['error', 'always'],
         'newline-before-return': 'error',
