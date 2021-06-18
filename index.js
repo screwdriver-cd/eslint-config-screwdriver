@@ -28,13 +28,10 @@ module.exports = {
                 peerDependencies: false
             }
         ],
-        'max-lines-per-function': 'warn',
-        'max-params': 'warn',
-        'max-statements': 'warn',
-        'new-cap': [
-            'error',
-            { capIsNewExceptions: ['Given', 'When', 'Then', 'Before', 'After'] }
-        ],
+        'max-lines-per-function': ['warn', { max: 150, skipComments: true }],
+        'max-params': ['warn', 5],
+        'max-statements': ['warn', 50], // in an async/await world this can get high
+        'new-cap': ['error', { capIsNewExceptions: ['Given', 'When', 'Then', 'Before', 'After'] }],
         'newline-after-var': ['error', 'always'],
         'newline-before-return': 'error',
         'no-await-in-loop': 'warn',
