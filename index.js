@@ -64,7 +64,9 @@ module.exports = {
             {
                 singleQuote: true,
                 tabWidth: 4,
-                printWidth: 120
+                printWidth: 120,
+                trailingComma: "none",
+                arrowParens: "avoid"
             }
         ],
         'require-jsdoc': [
