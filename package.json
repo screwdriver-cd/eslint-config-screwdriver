@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-screwdriver",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "ESLint rules for screwdriver projects",
   "main": "index.js",
   "scripts": {
@@ -49,11 +49,11 @@
     "nyc": "^15.1.0"
   },
   "dependencies": {
-    "eslint": "^8.26.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.0"
   }
 }
